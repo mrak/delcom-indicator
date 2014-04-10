@@ -1,9 +1,6 @@
 var hid = require('node-hid');
 
 function DelcomIndicator(){
-  var vendorId = 0xFC5;
-  var productId = 0xB080;
-
   this.green = 0xFE;
   this.red = 0xFD;
   this.blue = 0xFB;
@@ -18,10 +15,13 @@ function DelcomIndicator(){
 };
 
 DelcomIndicator.prototype.findDevice = function(){
-    var devices = hid.devices(vendorId, productId);
-    if (devices !== undefined){
-      return devices[0];
-    }
+  var vendorId = 0xFC5;
+  var productId = 0xB080;
+  var devices = hid.devices(vendorId, productId);
+
+  if (devices !== undefined){
+    return devices[0];
+  }
 }
 
 DelcomIndicator.prototype.open = function() {
