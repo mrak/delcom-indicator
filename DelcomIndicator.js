@@ -29,6 +29,7 @@ DelcomIndicator.prototype.open = function() {
   if (this.device){
     this.deviceConnection = new hid.HID(this.device.path);
   }
+  return this;
 };
 
 DelcomIndicator.prototype.isConnected = function(){
