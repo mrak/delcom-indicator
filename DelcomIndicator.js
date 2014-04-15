@@ -40,7 +40,7 @@ DelcomIndicator.prototype.isConnected = function(){
 };
 
 DelcomIndicator.prototype.isOpen = function() {
-  return this.deviceConnection;
+  return Boolean(this.deviceConnection);
 };
 
 DelcomIndicator.prototype.close = function(){
