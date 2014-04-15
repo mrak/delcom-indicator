@@ -41,8 +41,21 @@ grunt
 ```
 
 ##Sample Code
+
+```javascript
+var DelcomIndicator = require('delcom-indicator');
+var delcomIndicator = new DelcomIndicator();
+delcomIndicator.flashRed();
+delcomIndicator.close();
+```
+
 The test spike (tests/spike.cs) opens an attached Delcom light and runs through the available functionality by turning
 it solid greed, red and blue and then flashing each color.  It should be pretty self-explanatory.
+
+##Sample Application
+
+A [Build Light indicator for TeamCity](https://github.com/SouthsideSoftware/teamcity-buildlight) that utilizes this
+library to show the status of builds.
 
 
 
