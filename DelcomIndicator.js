@@ -3,6 +3,7 @@ var hid = require('node-hid');
 function DelcomIndicator(){
   this.green = 0xFE;
   this.red = 0xFD;
+  this.orange = 0xFC;
   this.blue = 0xFB;
   this.purple = 0xF9;
   this.off = 0xFF;
@@ -61,6 +62,10 @@ DelcomIndicator.prototype.solidRed = function(){
   this.solidColor(this.red);
 };
 
+DelcomIndicator.prototype.solidOrange = function(){
+  this.solidColor(this.orange);
+};
+
 DelcomIndicator.prototype.solidBlue = function(){
   this.solidColor(this.blue);
 };
@@ -81,6 +86,10 @@ DelcomIndicator.prototype.flashGreen = function(){
 
 DelcomIndicator.prototype.flashRed = function(){
   this.flashColor(this.red, 2)
+};
+
+DelcomIndicator.prototype.flashOrange = function(){
+  this.flashColor(this.red, 3)
 };
 
 DelcomIndicator.prototype.flashBlue = function(){
