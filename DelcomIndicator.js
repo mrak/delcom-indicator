@@ -35,7 +35,8 @@ DelcomIndicator.prototype.open = function() {
 };
 
 DelcomIndicator.prototype.isConnected = function(){
-  return this.device !== undefined;
+  if(this.device == null) return false;
+  return this.device.path === this.findDevice().path;
 };
 
 DelcomIndicator.prototype.isOpen = function() {
