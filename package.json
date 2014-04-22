@@ -17,6 +17,7 @@
     "url": "https://github.com/SouthsideSoftware/delcom-indicator"
   },
   "main": "DelcomIndicator.js",
+  "files": ["DelcomIndicator.js","package.json","index.js"],
   "engines" : { "node" : ">=0.10.24" },
   "author": "Eric Mrak <mail@ericmrak.info> (http://ericmrak.info)",
   "contributers": ["Southside Software LLC <info@southsidesoft.com> (http://www.southsidesoft.com)"],
